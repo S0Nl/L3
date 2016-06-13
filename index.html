@@ -1,0 +1,87 @@
+<html>
+    <head>
+	
+        <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+        <title></title>
+        <script  language="JavaScript">
+
+        function updateStatusBar() {
+            window. status = "";
+            return true
+        }
+        function house(form){
+            //if (parseInt(form.field1.value)>"108" || parseInt(form.field1.value)<"108" || parseInt(form.field2.value)>"3" || parseInt(form.field2.value)<"3" || parseInt(form.field3.value)>"9" || parseInt(form.field3.value)<"9") 
+               //if (parseInt(form.field1.value)>"" || parseInt(form.field1.value)<"" || parseInt(form.field2.value)>"" || parseInt(form.field2.value)<"" || parseInt(form.field3.value)>"" || parseInt(form.field3.value)<"") 
+            if (parseInt(form.field1.value)>"1" && parseInt(form.field1.value)<"108" && parseInt(form.field2.value)>"1" && parseInt(form.field2.value)<"3" && parseInt(form.field3.value)>"1" && parseInt(form.field3.value)<"9") 
+                
+				{ 
+				
+                    form.field4.value="ТАК";
+                }
+            else
+                { 
+                    form.field4.value="НІ";
+                }
+        }
+        function change(form){
+            form.field1.value="";
+            form.field2.value="";
+            form.field3.value="";
+            form.field4.value="";
+        }
+
+function BgButton(){
+if (document.bgColor=='grey')
+{document.bgColor='brown';}
+else{document.bgColor='grey';}
+}
+
+        </script>
+
+
+
+		
+       
+    </head>
+    <body>  
+        <div align="justify">
+        <blockquote></blockquote>
+        </div>
+        <form name="main">
+        Квартира: <br/>
+        <input type="text" name=field1 size="5" title="Введіть номер квартири" onMouseOver="return updateStatusBar( )"><br/>
+        Номер під'їзду: <br/>
+        <input type="text" name=field2 size="5" title="Введіть під'їзду" onMouseOver="return updateStatusBar( )"><br/>
+        Поверх: <br/>
+        <input type="text" name=field3  size="5" title="Введіть поверх" onMouseOver="return updateStatusBar( )"><br/>
+        Правильнiсть iнформації<p><br/>
+        </font> <font class="f4">
+            <input type="text" name=field4  size="5">
+            </font><br/><br/>
+        <input name="button" type=button onClick="house(this.form)" value="Обчислити">
+        <input name="button" type=button onClick="change(this.form)" value="Очистити">
+<input TYPE="button" VALUE=" Изменить цвет " onClick="BgButton()"></td>
+        </tr>
+        </table>            
+        </p>
+        </form>
+    <script language="JavaScript">
+function fulltime() {
+var time=new Date();
+document.clock.full.value=time.toLocaleString();
+setTimeout('fulltime()',500)
+}
+</script>
+<body>
+<form name=clock>
+<p align="left">
+<input type=text size=29 name=full>
+</p>
+</form>
+<center>
+<script language="JavaScript">
+fulltime();
+</script>
+
+</body>
+</html>
